@@ -1,0 +1,299 @@
+@font-face {
+    font-family: "STSong", Regular;
+    src: url("./font/Songti.ttc");
+}
+
+@font-face {
+    font-family: "Mshtaken", Regular;
+    src: url("./font/Mshtakan.ttc");
+}
+
+@font-face {
+    font-family: "PingFang HK", Medium;
+    src: url("./font/PingFang.ttc");
+}
+
+@font-face {
+    font-family: "PingFang HK", Regular;
+    src: url("./font/PingFang.ttc");
+}
+
+html {
+ background-image: url(./img/baggrund3.png);
+ background-size: cover;
+}
+
+@media (min-width:800px){
+    header {
+        background-color: #F4F2Ed;
+        margin-right: -5px;
+        margin-left: -5px;
+        margin-bottom: 6%;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: space-between;
+        font-family:"PingFang HK", Medium;
+    } 
+
+    .navhover:hover {
+        background-color: #CD9276;
+        color: #F4F2Ed;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 2px 3px 3px 0px rgba(44, 43, 43, 0.5);
+    }
+
+    .menu ul {
+        list-style: none;
+        display: flex;
+    }
+
+    .menu ul li {
+        padding: 10px;
+        font-size: 25px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .menu ul li a {
+        color:#505150;
+        text-decoration: none;
+    }
+
+    ul .colorchange li a {
+        color:#CD9276;
+        margin-right: 60px;
+    }
+
+    footer {
+            position: flex;
+            width: 100%;
+            background-color:#44434C;
+            padding: 0px;
+            color: #F4F2ED;   
+            list-style: none;
+            font-family:"PingFang HK", Regular;
+        }
+        .grid_1-1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            align-items: center; 
+            padding: 10px;
+            margin-left: 15%;
+            margin-right: 0;
+        }
+
+        footer .grid_1-1 h2 {
+        font-size: 20px;
+        margin-bottom: 0px;
+        }
+
+        footer .grid_1-1 a {
+        font-family: "PingFang HK", Regular;
+        color: #F4F2ED;
+        font-size: 16px;
+        }
+
+        .mail {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-right: 50px;
+        margin-top: 10px;
+        }
+
+        .mail img {
+        max-width: 100%;
+        height: 20px;
+        margin: 0;
+
+        }
+
+        .mail p {
+        margin-top: -4px;
+        margin-left: -84%
+        }
+}
+
+/* BURGER MENU! */
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 35px;
+    height: 5px;
+    background-color: #CD9276;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu.active {
+    display: block;
+}
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(206, 133, 91); 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 0px; 
+    font-size: 15px; 
+  }
+  
+  #myBtn:hover {
+    background-color: #555; 
+  }
+
+@media screen and (max-width: 800px) {
+    header {
+        background-color: #F4F2Ed;
+        margin-top: 4%;
+        padding: 4px;
+        margin-left: -10px;
+        margin-right: -10px;
+    } 
+
+    .menu {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.active .line:nth-child(1) {
+        transform: rotate(-60deg) translate(-5px, 5px);
+    }
+
+    .burger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active .line:nth-child(3) {
+        transform: rotate(60deg) translate(-5px, -5px);
+    }
+
+    .menu.active {
+        display: block;
+        position: absolute;
+        background: #EBDACA;
+        font-family:"PingFang HK", Medium;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navhover:hover {
+        background-color: #44434C;
+        transition: all 0.3s ease-in-out;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 2px 3px 3px 0px rgba(44, 43, 43, 0.5);
+    }
+
+    .menu.active ul {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .menu.active ul li {
+        margin-right: 0;
+        display: block;
+    }
+
+    .menu.active ul li a {
+        color: #CD9276;
+        text-decoration: none;
+        font-size: 20px;
+        margin-bottom: 10px; 
+    }
+
+    /*footer*/
+    footer {
+        position: flex;
+        background-color:#44434C;
+        color: #F4F2ED;   
+        list-style: none;
+        font-family:"PingFang HK", Regular;
+        margin: -5px;
+        margin-bottom: -10px;
+    }
+
+    .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center; 
+        padding: 10px;
+    }
+
+    footer .grid_1-1 h2 {
+    font-size: 13px;
+    margin-left: 10px;
+    margin-right: 0px;
+    }
+
+    footer .grid_1-1 a {
+        font-family: "PingFang HK", Regular;
+        font-size: 15px;
+        color: #F4F2ED;
+        margin-left: 15px;
+    }
+
+    .mail {
+    margin-right: 50px;
+    }
+
+    .mail img {
+    max-width: 100%;
+    height: 15px;
+    margin: 0px;
+    margin-top: 2px;
+    margin-left: -2px;
+    }
+
+    .mail p {
+    margin-top: -30px;
+    margin-left: 50px;
+    }
+
+    .kea h2 {
+        padding-right: 10;
+    }
+
+    .kea p{
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    #myBtn {
+        display: none; 
+        position: fixed; 
+        bottom: 20px; 
+        right: 30px; 
+        z-index: 99; 
+        border: none; 
+        outline: none; 
+        background-color: rgb(255, 255, 255); 
+        color: rgb(206, 133, 91); 
+        cursor: pointer; 
+        padding: 15px; 
+        border-radius: 0px; 
+        font-size: 15px; 
+      }
+      
+      #myBtn:hover {
+        background-color: #555; 
+      }
+}
